@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hbi-cD-CJn">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Cachorros-->
+        <scene sceneID="B3s-L0-XMY">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="lMw-J0-ad7" customClass="ViewController" customModule="Dog_breeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="kxH-iR-Zs9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" id="iaK-Ev-eyM" customClass="DogCelula" customModule="Dog_breeds" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iaK-Ev-eyM" id="0kK-UM-Ubv">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-vR-Twb">
+                                            <rect key="frame" x="108" y="16" width="262" height="22"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="descricao" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rm-OU-C0w">
+                                            <rect key="frame" x="108" y="43" width="262" height="14"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pastor Alemão" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-69-91u">
+                                            <rect key="frame" x="20" y="5" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="wpT-Ue-TSK"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4LP-vR-Twb" firstAttribute="trailing" secondItem="2rm-OU-C0w" secondAttribute="trailing" id="4In-v4-Y3q"/>
+                                        <constraint firstItem="2rm-OU-C0w" firstAttribute="top" secondItem="4LP-vR-Twb" secondAttribute="bottom" constant="5" id="IjA-kU-WaF"/>
+                                        <constraint firstItem="2rm-OU-C0w" firstAttribute="leading" secondItem="y1g-69-91u" secondAttribute="trailing" constant="8" symbolic="YES" id="S41-wm-q1e"/>
+                                        <constraint firstItem="4LP-vR-Twb" firstAttribute="top" secondItem="0kK-UM-Ubv" secondAttribute="top" constant="16" id="SJG-8y-DXQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="y1g-69-91u" secondAttribute="bottom" constant="5" id="X5z-Sw-dvt"/>
+                                        <constraint firstAttribute="trailing" secondItem="4LP-vR-Twb" secondAttribute="trailing" constant="20" symbolic="YES" id="bhW-2X-gFz"/>
+                                        <constraint firstItem="y1g-69-91u" firstAttribute="leading" secondItem="0kK-UM-Ubv" secondAttribute="leading" constant="20" symbolic="YES" id="fGY-hF-eWg"/>
+                                        <constraint firstItem="4LP-vR-Twb" firstAttribute="leading" secondItem="y1g-69-91u" secondAttribute="trailing" constant="8" symbolic="YES" id="oHh-n8-MM9"/>
+                                        <constraint firstItem="y1g-69-91u" firstAttribute="top" secondItem="0kK-UM-Ubv" secondAttribute="top" constant="5" id="rib-JN-R7F"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descricaoLabel" destination="2rm-OU-C0w" id="91S-Fe-dOh"/>
+                                    <outlet property="dogImageView" destination="y1g-69-91u" id="17R-Lq-fTT"/>
+                                    <outlet property="tituloLabel" destination="4LP-vR-Twb" id="Dbf-V3-dIV"/>
+                                    <segue destination="sr0-uY-xdX" kind="show" identifier="detalheDog" id="7iO-NR-1e9"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lMw-J0-ad7" id="Gds-JU-8Lq"/>
+                            <outlet property="delegate" destination="lMw-J0-ad7" id="h31-Z7-NHc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Cachorros" id="QZJ-lE-dbQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LhW-O9-Lsp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1040" y="116.58767772511848"/>
+        </scene>
+        <!--Detalhes Dog View Controller-->
+        <scene sceneID="Sev-u7-ZMi">
+            <objects>
+                <viewController id="sr0-uY-xdX" customClass="DetalhesDogViewController" customModule="Dog_breeds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gdf-FX-ThS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-oQ-rFT">
+                                <rect key="frame" x="16" y="103.99999999999999" width="358" height="238.66666666666663"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pastor Alemão" translatesAutoresizingMaskIntoConstraints="NO" id="CBK-q3-Sfc">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="238.66666666666666"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MhP-oQ-rFT" secondAttribute="height" multiplier="3:2" id="PRl-oE-z8j"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="spa-3h-4Y7">
+                                <rect key="frame" x="16" y="358.66666666666669" width="358" height="57.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-Qh-OyB">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBv-Yf-3OG">
+                                        <rect key="frame" x="0.0" y="40" width="358" height="17.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I05-7S-40F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MhP-oQ-rFT" firstAttribute="leading" secondItem="I05-7S-40F" secondAttribute="leading" constant="16" id="FEX-QV-GGA"/>
+                            <constraint firstItem="I05-7S-40F" firstAttribute="trailing" secondItem="MhP-oQ-rFT" secondAttribute="trailing" constant="16" id="aM8-zi-74H"/>
+                            <constraint firstItem="spa-3h-4Y7" firstAttribute="leading" secondItem="I05-7S-40F" secondAttribute="leading" constant="16" id="bbG-qd-Mwn"/>
+                            <constraint firstItem="I05-7S-40F" firstAttribute="trailing" secondItem="spa-3h-4Y7" secondAttribute="trailing" constant="16" id="eUY-jt-REo"/>
+                            <constraint firstItem="spa-3h-4Y7" firstAttribute="top" secondItem="MhP-oQ-rFT" secondAttribute="bottom" constant="16" id="slH-D8-gS0"/>
+                            <constraint firstItem="MhP-oQ-rFT" firstAttribute="top" secondItem="I05-7S-40F" secondAttribute="top" constant="16" id="tjT-v9-Ugh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jxy-2c-T4Q"/>
+                    <connections>
+                        <outlet property="descricaoLabel" destination="bBv-Yf-3OG" id="eEi-ey-pDe"/>
+                        <outlet property="dogImageView" destination="CBK-q3-Sfc" id="im5-TA-bBa"/>
+                        <outlet property="tituloLabel" destination="ho9-Qh-OyB" id="Q6Q-1k-22A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GdI-uC-EYE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793.8461538461538" y="116.58767772511848"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kSK-ol-UD5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbi-cD-CJn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cXp-2h-uXo">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lMw-J0-ad7" kind="relationship" relationship="rootViewController" id="CUH-77-bsW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0j-IX-t3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110.76923076923076" y="116.58767772511848"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pastor Alemão" width="213.33332824707031" height="142.33332824707031"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
