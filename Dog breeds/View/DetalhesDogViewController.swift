@@ -9,7 +9,8 @@ import UIKit
 
 class DetalhesDogViewController: UIViewController {
     
-    var dog: Dog!
+    var dog: Dog?
+    
     
     @IBOutlet weak var dogImageView: UIImageView!
     @IBOutlet weak var tituloLabel: UILabel!
@@ -17,10 +18,18 @@ class DetalhesDogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getdata()
+    }
+    
+    func getdata() {
+        guard let dogImage = dog?.image else {return}
+        guard let dogTitleLabel = dog?.name else {return}
+        guard let dogDescription = dog?.description else {return}
 
-        dogImageView.image = dog.image
-        tituloLabel.text = dog.titulo
-        descricaoLabel.text = dog.descricao
+        dogImageView.image = UIImage(named: dogImage)
+        tituloLabel.text = dogTitleLabel
+        descricaoLabel.text = dogDescription
     }
     
 
