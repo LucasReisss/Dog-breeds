@@ -8,7 +8,7 @@
 import Foundation
 
 class APIService<T: Codable> {
-    let accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmcGp5cW9ra2xqYnNoZWtpcWdmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg1ODEwMTUsImV4cCI6MTk5NDE1NzAxNX0.kVytniABF4oEZFaGzzHKts8wq4zpaMj8Nc3fWSC1Rdc"
+    let accessToken = "token"
     
     func request(url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         var request = URLRequest(url: url)
